@@ -1,48 +1,52 @@
-![](https://i.imgur.com/xG74tOh.png)
+# Projeto: Rotating Players API
 
-# Exercício 01
+Este é um projeto simples de API desenvolvido em Node.js usando o framework Express. A API retorna jogadores em uma ordem rotativa em cada chamada.
 
-## ControladorDeRodadas.com
+## Como Usar
 
-Para este exercício deverá ser criado um servidor com nodejs para controlar rodadas de um jogo. Dado um array de nomes de jogadores que estará no script do servidor, deveremos a cada requisição ao servidor, responder com uma mensagem dizendo de quem é a vez de jogar.
+### Pré-requisitos
 
-Portanto, supondo que exista no script do servidor, o array **jogadores** abaixo:
+- Node.js instalado no seu sistema.
 
-```javascript=
-const jogadores = ["José", "Maria", "João", "Marcos", "Fernanda"];
-```
+### Instalação
 
-A cada requisição, deveremos retornar uma mensagem ao navegador no seguinte formato:
+1. Clone o repositório:
 
-```
-É a vez de {nomeDoJogador} jogar!
-```
+   ```bash
+   git clone https://github.com/marcopezzote/exercicios-backend-primeiro-servidor.git
 
-Portanto, considerando o array de exemplo acima, na primeira requisição deverá ser retornado:
+    Navegue até o diretório do projeto:
 
-```
-É a vez de José jogar!
-```
+    bash
 
-Na segunda requisição:
+cd nome-do-repositorio
 
-```
-É a vez de Maria jogar!
-```
+Instale as dependências:
 
-E assim por diante.
+bash
 
-Após apresentar o nome do último jogador, a rodada finaliza e portanto, o próximo nome a ser retornado na próxima requisição deverá ser o do primeiro jogador, iniciando uma nova rodada.
+    npm install
 
-O servidor deverá utilizar a porta 3000 e ser acessado através do endereço http://localhost:3000, para onde enviaremos as requisições e de onde receberemos as respostas com as mensagens mencionadas acima.
+Execução
 
----
+    Inicie o servidor:
 
-Preencha a checklist para finalizar o exercício:
+    bash
 
--   [ x ] Resolver o exercício revendo a aula se necessário
--   [ x ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
--   [ x ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
--   [ x ] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
+    node index.js
 
-###### tags: `backend` `lógica` `exercício` `nodeJS` `JavaScript`
+    Acesse a API em http://localhost:3000/.
+
+Exemplo de Uso
+
+Faça uma solicitação GET para a raiz da API:
+
+bash
+
+curl http://localhost:3000/
+
+Isso retornará o nome de um jogador. Em cada solicitação subsequente, o próximo jogador será retornado.
+Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou abrir issues se encontrar algum problema.
+

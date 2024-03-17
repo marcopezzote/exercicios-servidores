@@ -1,82 +1,65 @@
-![](https://i.imgur.com/xG74tOh.png)
+# Projeto: Cronômetro API
 
-# Exercício 02
+Este é um projeto de API de cronômetro desenvolvido em Node.js usando o framework Express. A API permite iniciar, pausar, continuar, zerar e visualizar o tempo decorrido do cronômetro.
 
-## Cronômetro Online
+## Como Usar
 
-Para este exercício deverá ser criado um cronômetro online que conte minutos e segundos apenas. Para isso, deveremos criar o servidor onde será contado o tempo do cronômetro. Este servidor deverá possuir os recursos: **principal** (raiz - onde o tempo atual do cronômetro será mostrado), **iniciar**, **pausar**, **continuar** e **zerar**. A seguir especificaremos como cada recurso deverá funcionar.
+### Pré-requisitos
 
-O servidor deverá funcionar escutando a porta 8000, através do endereço http://localhost:8000 onde funcionará o recurso principal (raiz).
+- Node.js instalado no seu sistema.
 
-**a) Recurso principal (raiz)**
+### Instalação
 
-No principal recurso do servidor, acessado através de http://localhost:8000 deverá ser retornada uma mensagem mostrando o tempo atual do cronômetro, seguindo o seguinte formato:
+1. Clone o repositório:
 
-```
-Tempo atual do cronômetro: 01 minutos e 07 segundos
-```
+   ```bash
+   git clone https://github.com/marcopezzote/exercicios-backend-primeiro-servidor.git
 
-Tanto os minutos quanto os segundos deverão ser mostrados com dois dígitos, completando com zero à esquerda quando necessário.
+    Navegue até o diretório do projeto:
 
-**b) Iniciar**
+    bash
 
-O recurso iniciar será responsável por iniciar a contagem do cronômetro e aplicar toda a lógica que for necessária para que o cronômetro funcione corretamente.
+cd nome-do-repositorio
 
-Este recurso deverá ser acessado através do endereço http://localhost:8000/iniciar
+Instale as dependências:
 
-Após iniciar a contagem do cronômetro, este recurso deverá retornar a mensagem:
+bash
 
-```
-Cronômetro iniciado!
-```
+    npm install
 
-**Dica:** Para controlar o tempo do cronômetro no servidor pode ser utilizado o **setInterval()**.
+Execução
 
-**c) Pausar**
+    Inicie o servidor:
 
-O cronômetro deverá também possuir um recurso para pausar o tempo do cronômetro.
+    bash
 
-Este recurso deverá ser acessado através do endereço http://localhost:8000/pausar
+    node index.js
 
-Após pausar a contagem do cronômetro, este recurso deverá retornar a mensagem:
+    Acesse a API em http://localhost:8000/.
 
-```
-Cronômetro pausado!
-```
+Endpoints da API
 
-**d) Continuar**
+    GET /: Retorna o tempo atual do cronômetro.
+    GET /iniciar: Inicia o cronômetro.
+    GET /pausar: Pausa o cronômetro.
+    GET /continuar: Continua a contagem do cronômetro, se estiver pausado.
+    GET /zerar: Zera o cronômetro.
 
-Este recurso será responsável por continuar a contagem do tempo do cronômetro.
+Exemplo de Uso
 
-Este recurso deverá ser acessado através do endereço http://localhost:8000/continuar
+Para iniciar o cronômetro, faça uma solicitação GET para /iniciar:
 
-Após continuar (resumir) a contagem do cronômetro, este recurso deverá retornar a mensagem:
+bash
 
-```
-Cronômetro continuando!
-```
+curl http://localhost:8000/iniciar
 
-**e) Zerar**
+Para pausar o cronômetro, faça uma solicitação GET para /pausar:
 
-Para finalizar, o cronômetro também deverá poder ser zerado através do recurso zerar.
+bash
 
-Este recurso deverá ser acessado através do endereço http://localhost:8000/zerar
+curl http://localhost:8000/pausar
 
-Após zerar os valores de minutos e segundos do cronômetro, este recurso deverá retornar a mensagem:
+E assim por diante para os outros endpoints.
+Contribuições
 
-```
-Cronômetro zerado!
-```
-
-**Importante:** O recurso **zerar** não deverá afetar o estado do cronômetro e também não deverá afetar o funcionamento dos outros recursos. Portanto se o cronômetro estiver parado e o recurso **zerar** for requisitado, após zerar os valores o cronômetro deverá se manter parado. O proporcional deverá acontecer para quando o cronômetro estiver executando a contagem (zerar os valores sem parar de contar).
-
----
-
-Preencha a checklist para finalizar o exercício:
-
--   [ x ] Resolver o exercício revendo a aula se necessário
--   [ x ] Adicionar as mudanças aos commits (`git add .` para adicionar todos os arquivos, ou `git add nome_do_arquivo` para adicionar um arquivo específico)
--   [ x ] Commitar a cada mudança significativa ou na finalização do exercício (`git commit -m "Mensagem do commit"`)
--   [ x ] Pushar os commits na sua branch na origem (`git push origin nome-da-branch`)
-
-###### tags: `backend` `lógica` `exercício` `nodeJS` `JavaScript`
+Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou abrir issues se encontrar algum problema.

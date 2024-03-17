@@ -1,19 +1,9 @@
-![](https://i.imgur.com/xG74tOh.png)
+# Exercicios inicias de servidores
 
-# Back-end | Primeiro Servidor
+Este é um projeto simples de API desenvolvido em Node.js usando o framework Express. A API retorna jogadores em uma ordem rotativa em cada chamada.
 
-## Exercícios
+## Como Usar
 
-1. ControladorDeRodadas.com
-2. Cronômetro Online
+As pastas 01 e 02 contém dois exemplos de implementação de servidores usando Node.Js e Express.
 
----
-
-Preencha a checklist para fazer os exercícios:
-
--   [ ] Fazer o fork do repositório para sua conta
--   [ ] Executar `git clone` do seu fork no terminal para clonar o repositório, ou clonar de outra maneira
--   [ ] Após fazer e commitar todos os exercícios fazer o `git push` para seu fork
--   [ ] Copiar a url do seu fork e enviar na plataforma
-
-###### tags: `módulo 2` `exercícios` `lógica` `nodeJS`
+Cada pasta contém suas  instruções para rodar o projeto em seus respectivos arquivos README.md
